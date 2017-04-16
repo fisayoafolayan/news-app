@@ -6,14 +6,15 @@
 <p class="select-header"> Select a news source: </p>
 <label class="select"> 
     <select name="news_sources" id="news_sources">
+    <option value="{{@$source_id}} : {{@$source_name}}">{{$source_name}}</option>
     @foreach ($news_sources as $news_source)
-      <option value="{{$news_source['id']}}">{{$news_source['name']}}</option>
+      <option value="{{$news_source['id']}} : {{$news_source['name'] }}">{{$news_source['name']}}</option>
     @endforeach
     </select>
 </label>
 
  </section> 
-
+<p> News Source : {{$source_name}}</p>
     <section class="news">
     @foreach($news as $selected_news)
     <article>
