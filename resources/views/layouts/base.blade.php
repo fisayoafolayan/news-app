@@ -31,7 +31,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Scripts -->
-    <script src="{{ https://news-web-app.herokuapp.com/js/site.js}"></script>
+    <script src="https://news-web-app.herokuapp.com/js/site.js"></script>
     <script src="{{ asset('js/site.js') }}"></script>
     
 </html>
