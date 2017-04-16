@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="{{ http://news-web-app.herokuapp.com/css/style.css' or asset('css/style.css') }}" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://use.fontawesome.com/43db5e56d9.js"></script>
