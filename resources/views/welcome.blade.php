@@ -2,18 +2,16 @@
 
 @section('content')
 {{ csrf_field() }}
-  <!-- <div id="loading" hidden>
-        <img src="{{ asset('img/loading.gif') }}" alt="Loading..." />
-   </div> -->
 <section id="content" class="section-dropdown">
-
-<label class="select">
+<p class="select-header"> Select a news source: </p>
+<label class="select"> 
     <select name="news_sources" id="news_sources">
     @foreach ($news_sources as $news_source)
       <option value="{{$news_source['id']}}">{{$news_source['name']}}</option>
     @endforeach
     </select>
 </label>
+
  </section> 
 
     <section class="news">

@@ -114,3 +114,7 @@ select{
    text-align:center;
 }
 
+.select-header{
+    text-align: left;
+    padding-left: 54px;
+}
