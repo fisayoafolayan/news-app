@@ -11,7 +11,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link href="{{ http://news-web-app.herokuapp.com/css/style.css' or asset('css/style.css') }}" rel="stylesheet">
+        <link href="https://news-web-app.herokuapp.com/css/style.css" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://use.fontawesome.com/43db5e56d9.js"></script>
@@ -30,6 +31,7 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Scripts -->
+    <script src="{{ https://news-web-app.herokuapp.com/js/site.js}"></script>
     <script src="{{ asset('js/site.js') }}"></script>
     
 </html>
