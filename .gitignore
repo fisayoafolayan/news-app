@@ -9,3 +9,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.idea
+.idea/workspace.xml
+.DS_Store
+public/.DS_Store

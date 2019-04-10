@@ -60,6 +60,10 @@ return [
 
     'news_api_key' => env('NEWS_API_KEY', null),
 
+    'default_news_source' => env('DEFAULT_NEWS_SOURCE', 'CNN'),
+
+    'default_news_source_id' => env('DEFAULT_NEWS_SOURCE_ID', 'cnn'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -178,6 +182,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\HelperServiceProvider::class,
 
     ],
 
@@ -229,6 +234,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Helper' => App\Helpers\Helper::class,
 
     ],
 

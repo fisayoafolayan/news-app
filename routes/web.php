@@ -13,3 +13,4 @@
 
 
 Route::get('/', 'ApiController@displayNews');
+Route::post('/sourceId', 'ApiController@displayNews');

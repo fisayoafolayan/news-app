@@ -2,12 +2,15 @@
 
 namespace App;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
+use App\Helpers\Helper;
 use Illuminate\Database\Eloquent\Model;
-use GuzzleHttp\Psr7;
+
 use Illuminate\Support\Arr;
 
+/**
+ * Class Api
+ * @package App
+ */
 class Api extends Model
 {
 
@@ -17,8 +20,23 @@ class Api extends Model
  */
     public function fetchAllNews()
     {
-        $url_params = 'everything?q=news';
-        $response = $this->makeApiCalls($url_params);
+        $urlParams = 'everything?q=news';
+        $response = (new Helper)->makeApiCalls($urlParams);
+
+        return Arr::get($response,'articles');
+
+    }
+
+
+    /**
+     * @param $newsSource
+     * @return mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function fetchNewsFromSource($newsSource)
+    {
+        $urlParams = 'top-headlines?sources=' . $newsSource;
+        $response = (new Helper)->makeApiCalls($urlParams);
 
         return Arr::get($response,'articles');
 
@@ -31,33 +49,10 @@ class Api extends Model
      */
     public function getAllSources()
     {
-        $url_params = 'sources';
-        $response = $this->makeApiCalls($url_params);
+        $urlParams = 'sources?';
+        $response = (new Helper)->makeApiCalls($urlParams);
 
         return Arr::get($response,'sources');
     }
 
-    /**
-     * @param $url_params
-     * @return mixed
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function makeApiCalls($url_params)
-    {
-        try {
-            $client = new Client();
-
-            $apiRequest = $client->request('GET', config('app.news_api_url') .$url_params.'?&apiKey=' . config('app.news_api_key'));
-
-            return json_decode($apiRequest->getBody()->getContents(), true);
-
-
-        } catch (RequestException $e) {
-            //For handling exception
-            echo Psr7\str($e->getRequest());
-            if ($e->hasResponse()) {
-                echo Psr7\str($e->getResponse());
-            }
-        }
-    }
 }
