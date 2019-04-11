@@ -41,6 +41,7 @@ $ php artisan key:generate
 ```
 
 ## Set environment keys
+Log on to [newsapi.org](https://newsapi.org/) to generate a new api key.
 ```
 NEWS_API_KEY=insert_key_here
 NEWS_API_URL='https://newsapi.org/v2/'
