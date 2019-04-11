@@ -4,7 +4,6 @@
 
 This is a simple implementation of how to a news aggregator site with Laravel and newsapi.org
 
-![alt text](https://d1026saeougtmn.cloudfront.net/newsapi.gif "Demo")
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
