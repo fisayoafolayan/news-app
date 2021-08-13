@@ -14,7 +14,6 @@ class ApiController extends Controller
      */
     public function displayNews(Request $request)
     {
-
         $response = $this->determineMethodHandler($request);
 
         $apiModel = new Api();
